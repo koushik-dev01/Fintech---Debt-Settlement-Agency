@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+</head>
+
+<body>
+    <div class="blob-bg">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <!-- header Section -->
+    <header id="header">
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">
+                    <img src="assets/logo1.png" alt="">
+                </a>
+                <div class="nav-links" id="navLinks">
+                    <a href="#about">About</a>
+                    <a href="#services">Services</a>
+                    <a href="#process">Process</a>
+                    <a href="#testimonials">Stories</a>
+                    <a href="#contact" class="btn btn-primary" style="padding: 10px 25px; border-radius: 6px;">Get
+                        Help</a>
+                </div>
+                <div class="mobile-toggle" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- hero section -->
+    <section class="hero">
+        <div class="container hero-grid">
+            <div class="hero-content" data-animate="fade-right">
+                <span class="badge">#1 Debt Resolution Platform</span>
+                <h1>Stop Loan Harassment. <br> <span class="gradient-text">Settle Your Debts
+                        Legally.</span></h1>
+                <p>Expert legal support for personal loans, credit cards & gold loans Pan-India network of legal
+                    professionals ready to help you</p>
+                <div class="hero-btn">
+                    <a href="#contact" class="btn btn-primary">Start Your Journey</a>
+                    <a href="#services" class="btn btn-secondary" style="border: 1px solid var(--text-gray);">How We
+                        Help</a>
+                </div>
+
+                <div class="achivments">
+                    <div>
+                        <h3>5000+</h3>
+                        <span>Cases Resolved</span>
+                    </div>
+                    <div>
+                        <h3>₹20Cr+</h3>
+                        <span>Debt Settled</span>
+                    </div>
+                    <div>
+                        <h3>50+</h3>
+                        <span>Citis Covered</span>
+                    </div>
+                    <div>
+                        <h3>98%</h3>
+                        <span>Client Satisfaction Rate</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-image-wrapper" data-animate="fade-left">
+                <img src="assets/banner image.jpeg" alt="Financial Freedom" class="hero-img">
+
+                <div class="float-card fc-1">
+                    <i class="fas fa-gavel"></i>
+                    <div>
+                        <h4>Legal Protection</h4>
+                        <span>Active 24/7</span>
+                    </div>
+                </div>
+                <div class="float-card fc-2">
+                    <i class="fas fa-check-circle" style="color: #10b981;"></i>
+                    <div>
+                        <h4>Settlement</h4>
+                        <span>Approved</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- why choose us section -->
+    <section class="problem-section">
+        <div class="container">
+            <div class="section-header" data-animate="fade-up">
+                <span class="badge" style="background: #fee2e2; color: #b91c1c;">Why Choose Us</span>
+                <h2>Trusted by thousands across India for legal debt resolution</h2>
+                <!-- <p>Unpaid loans can lead to aggressive tactics. Recognize the signs before it gets worse.</p> -->
+            </div>
+            <div class="problem-grid">
+                <div class="problem-card" data-animate="fade-up" data-animate-delay="100">
+                    <div class="icon-box"><i class="fa-solid fa-user-shield"></i></div>
+                    <h3>100% Legal Protection</h3>
+                    <p>Complete legal support backed by RBI guidelines and consumer protection laws</p>
+                </div>
+                <div class="problem-card" data-animate="fade-up" data-animate-delay="200">
+                    <div class="icon-box"><i class="fa-solid fa-ban"></i></div>
+                    <h3>Stop Harassment</h3>
+                    <p>End threatening calls and visits from recovery agents immediately</p>
+                </div>
+                <div class="problem-card" data-animate="fade-up" data-animate-delay="300">
+                    <div class="icon-box"><i class="fa-solid fa-piggy-bank"></i></div>
+                    <h3>Reduce Debt Burden</h3>
+                    <p>Negotiate settlements at reduced amounts, saving up to 50-70%</p>
+                </div>
+                <div class="problem-card" data-animate="fade-up" data-animate-delay="300">
+                    <div class="icon-box"><i class="fa-solid fa-chart-column"></i></div>
+                    <h3>Credit Score Help</h3>
+                    <p>Expert guidance on CIBIL correction and credit rebuilding</p>
+                </div>
+                <div class="problem-card" data-animate="fade-up" data-animate-delay="300">
+                    <div class="icon-box"><i class="fa-solid fa-handshake"></i></div>
+                    <h3>Expert Negotiators</h3>
+                    <p>Professional team handles all bank negotiations on your behalf</p>
+                </div>
+                <div class="problem-card" data-animate="fade-up" data-animate-delay="300">
+                    <div class="icon-box"><i class="fa-solid fa-lock"></i></div>
+                    <h3>100% Confidential</h3>
+                    <p>Your financial information is completely secure and private</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- about us section -->
+    <section id="about" class="section-padding">
+        <div class="container">
+            <div class="about-wrapper">
+                <div class="about-image"></div>
+                <div class="about-content" data-animate="fade-left">
+                    <span class="badge">About Us</span>
+                    <h2>India's Most Trusted Debt & Loan Resolution Company</h2>
+                    <p>Loan Mukti is India's leading debt resolution platform, committed to helping individuals and
+                        small businesses overcome their debt challenges and regain financial freedom.
+                        <br>
+                        <br>We specialize in cases related to loan defaults, cheque bouncing, and recovery agent
+                        harassment. Our panel of legal experts provides you with comprehensive legal support to stop
+                        harassment, negotiate settlements, and resolve debt issues permanently.
+                    </p>
+
+                    <h4>Our Core Values</h4>
+                    <div class="values-grid">
+                        <div class="value-item"><i class="fas fa-check-circle"></i> <span>Total Empathy</span></div>
+                        <div class="value-item"><i class="fas fa-check-circle"></i> <span>Legal Integrity</span></div>
+                        <div class="value-item"><i class="fas fa-check-circle"></i> <span>100% Transparency</span></div>
+                        <div class="value-item"><i class="fas fa-check-circle"></i> <span>Data Privacy</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- services section -->
+    <section id="services" class="section-padding" style="background: var(--bg-light);">
+        <div class="container">
+            <div class="section-header" data-animate="fade-up">
+                <span class="badge">Our Services</span>
+                <h2>Comprehensive debt resolution solutions</h2>
+            </div>
+            <div class="problem-grid problem-grid-services " style="color: white;">
+                <article class="service-card" style="background-image: url(assets/credit\ card.png);"
+                    data-animate="fade-up">
+                    <div class="dark-oly" style="background-color: rgba(0, 0, 0, 0.496);">
+                        <div class="icon-box"><i class="fa-solid fa-credit-card"></i></i></div>
+                        <h3>Credit Card Settlement</h3>
+                        <ul>
+                            <li>Reduce amounts by 50-70%</li>
+                            <li>Stop high interest accumulation</li>
+                            <li>End collection calls & threats</li>
+                            <li>Legal protection from lawsuits</li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="service-card" style="background-image: url(assets/personal-loan2.png);"
+                    data-animate="fade-up" data-animate-delay="100">
+                    <div class="dark-oly" style="background-color: rgba(0, 0, 0, 0.496);">
+                        <div class="icon-box"><i class="fa-solid fa-coins"></i></div>
+                        <h3>Personal Loan Settlement</h3>
+                        <ul>
+                            <li>Negotiate affordable repayment</li>
+                            <li>Stop legal notices & harassment</li>
+                            <li>Reduce total debt burden legally</li>
+                            <li>Professional bank negotiations</li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="service-card" style="background-image: url(assets/personal-loan.png);"
+                    data-animate="fade-up" data-animate-delay="200">
+                    <div class="dark-oly" style="background-color: rgba(0, 0, 0, 0.496);">
+                        <div class="icon-box"><i class="fa-solid fa-gem"></i></div>
+                        <h3>Gold Loan Resolution</h3>
+                        <ul>
+                            <li>Prevent unfair gold auction</li>
+                            <li>Negotiate fair interest rates</li>
+                            <li>Protect your valuable assets</li>
+                            <li>Legal safeguards against seizure</li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="service-card" style="background-image: url(assets/harassment.png);"
+                    data-animate="fade-up" data-animate-delay="300">
+                    <div class="dark-oly" style="background-color: rgba(0, 0, 0, 0.496);">
+                        <div class="icon-box"><i class="fa-solid fa-person-harassing"></i></div>
+                        <h3>Stop Recovery Harassment</h3>
+                        <ul>
+                            <li>Immediate legal action against agents</li>
+                            <li>Stop home/office visits</li>
+                            <li>End threatening calls & messages</li>
+                            <li>File complaints with RBI</li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="service-card" style="background-image: url(assets/credit\ card.png);"
+                    data-animate="fade-up" data-animate-delay="400">
+                    <div class="dark-oly" style="background-color: rgba(0, 0, 0, 0.496);">
+                        <div class="icon-box"><i class="fa-solid fa-arrow-up-right-dots"></i></div>
+                        <h3>CIBIL Score Correction</h3>
+                        <ul>
+                            <li>Identify & dispute credit errors</li>
+                            <li>Professional credit rebuilding</li>
+                            <li>Remove incorrect defaults</li>
+                            <li>Improve creditworthiness</li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="service-card" style="background-image: url(assets/legal-support.png);"
+                    data-animate="fade-up" data-animate-delay="600">
+                    <div class="dark-oly" style="background-color: rgba(0, 0, 0, 0.496);">
+                        <div class="icon-box"><i class="fa-solid fa-file-contract"></i></div>
+                        <h3>Legal Support & Defense</h3>
+                        <ul>
+                            <li>Court representation if needed</li>
+                            <li>Legal notice drafting</li>
+                            <li>Consumer court complaints</li>
+                            <li>Full legal documentation</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- process section -->
+    <section id="process" class="section-padding">
+        <div class="container">
+            <div class="section-header" data-animate="fade-up">
+                <span class="badge">How It Works</span>
+                <h2>Your Path to Freedom</h2>
+            </div>
+            <div class="process-steps">
+                <div class="step-item" data-animate="fade-up">
+                    <div class="step-num">1</div>
+                    <h3>Consult</h3>
+                    <p>Fill the form below. Our experts analyze your debt portfolio free of cost.</p>
+                </div>
+                <div class="step-item" data-animate="fade-up" data-animate-delay="150">
+                    <div class="step-num">2</div>
+                    <h3>Onboard</h3>
+                    <p>Sign up with Loan Mukti. We become your legal point of contact.</p>
+                </div>
+                <div class="step-item" data-animate="fade-up" data-animate-delay="300">
+                    <div class="step-num">3</div>
+                    <h3>Resolve</h3>
+                    <p>We handle calls and negotiate with banks while you focus on income.</p>
+                </div>
+                <div class="step-item" data-animate="fade-up" data-animate-delay="450">
+                    <div class="step-num">4</div>
+                    <h3>Freedom</h3>
+                    <p>Receive your Settlement Letter and NOC. Become debt-free.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- testimonials -->
+    <section id="testimonials" class="section-padding" style="background: #f1f5f9;">
+        <div class="container">
+            <div class="section-header" data-animate="fade-up">
+                <span class="badge">Success Stories</span>
+                <h2>Lives We Have Changed</h2>
+            </div>
+
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide testimonial-slide" data-animate="fade-up">
+                        <div class="stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="lead">"I was on the verge of closing my business. Loan Mukti handled the SARFAESI
+                            notice and restructured my loan. I saved my factory."</p>
+                        <h4>Rajesh Khanna</h4>
+                        <span>SME Owner, Delhi</span>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide testimonial-slide" data-animate="fade-up">
+                        <div class="stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="lead">"The harassment was unbearable. Within 48 hours of joining, the calls stopped.
+                            They settled my credit card debt for 35%."</p>
+                        <h4>Sneha P.</h4>
+                        <span>IT Professional, Bangalore</span>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide testimonial-slide" data-animate="fade-up">
+                        <div class="stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="lead">"Professional, legal, and very supportive. They don't give false hope, only real
+                            solutions."</p>
+                        <h4>Amit Verma</h4>
+                        <span>Mumbai</span>
+                    </div>
+
+                    <!-- NEW Slide 4 -->
+                    <div class="swiper-slide testimonial-slide" data-animate="fade-up">
+                        <div class="stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="lead">"Saved my gold loan from auction. Professional negotiation got me 60%
+                            settlement. Highly recommended!"</p>
+                        <h4>Priya Sharma</h4>
+                        <span>Homemaker, Pune</span>
+                    </div>
+
+                    <!-- NEW Slide 5 -->
+                    <div class="swiper-slide testimonial-slide" data-animate="fade-up">
+                        <div class="stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="lead">"My CIBIL score went from 450 to 720 in 6 months. Loan Mukti made it possible."
+                        </p>
+                        <h4>Rahul Mehta</h4>
+                        <span>Business Owner, Ahmedabad</span>
+                    </div>
+
+                    <!-- NEW Slide 6 -->
+                    <div class="swiper-slide testimonial-slide" data-animate="fade-up">
+                        <div class="stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="lead">"Multiple loans settled in one go. No more recovery agent stress. Debt-free
+                            now!"</p>
+                        <h4>Sunita R.</h4>
+                        <span>Teacher, Hyderabad</span>
+                    </div>
+
+                    <!-- NEW Slide 7 -->
+                    <div class="swiper-slide testimonial-slide" data-animate="fade-up">
+                        <div class="stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="lead">"Legal notices stopped within 72 hours. Best decision I ever made."</p>
+                        <h4>Vikram Singh</h4>
+                        <span>Engineer, Chandigarh</span>
+                    </div>
+
+                    <!-- NEW Slide 8 -->
+                    <div class="swiper-slide testimonial-slide" data-animate="fade-up">
+                        <div class="stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="lead">"Transparent process, excellent communication. Settled 3 loans at 40% total."
+                        </p>
+                        <h4>Anita Desai</h4>
+                        <span>Doctor, Kolkata</span>
+                    </div>
+
+                    <!-- NEW Slide 9 -->
+                    <div class="swiper-slide testimonial-slide" data-animate="fade-up">
+                        <div class="stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="lead">"From harassment to financial freedom in 4 months. Loan Mukti changed my life."
+                        </p>
+                        <h4>Karthik M.</h4>
+                        <span>Freelancer, Chennai</span>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <!-- <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div> -->
+            </div>
+        </div>
+    </section>
+
+
+    <!-- video section -->
+    <section class="section video-promo" style="margin-top: 30px;">
+        <h2 class="section-title" style="font-size: 2rem;">What Our claint Say About Us</h2>
+        <!-- <h3 class="section-subtitle">See how NexusGate connects global opportunities with Africa's potential</h3> -->
+        <div class="video-container">
+            <video id="promo-video" preload="metadata" poster="assets/video-poster2.jpeg" width="100%" height="auto"
+                conts controlsList="nodownload noplaybackrate" disablePictureInPicture oncontextmenu="return false;">
+                <source src="assets/promo-video-compressed.mp4" type="video/mp4">
+                <source src="Assets/promo-video.webm" type="video/webm">
+                Your browser does not support the video tag.
+            </video>
+            <button class="play-btn" id="play-btn" aria-label="Play video">
+                <i class="fa-solid fa-play"></i>
+            </button>
+            <!-- <div class="play-overlay"></div> -->
+        </div>
+    </section>
+
+    <!-- contact section -->
+    <section id="contact" class="section-padding" style="padding-bottom: 120px;">
+        <div class="container">
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="gradient">
+                        <h3>Get Your Free Analysis</h3>
+                        <p style="color: rgba(255,255,255,0.8); margin-bottom: 40px;">Don't let debt define your life.
+                            Speak
+                            to an expert today.</p>
+
+                        <div style="margin-bottom: 20px;">
+                            <h5 style="color: var(--accent);">Email Us</h5>
+                            <p>help@loanmukti.in</p>
+                        </div>
+                        <div>
+                            <h5 style="color: var(--accent);">Call Us</h5>
+                            <p>+91 98765 43210</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="loanForm" action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="800dfeba-0810-48fd-9e61-d8e244e8c5ac">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" class="form-input" placeholder=" " required>
+                            <label for="name" class="form-label">Full Name</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email"class="form-input" placeholder=" " required>
+                            <label for="email" class="form-label">Email Address</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" name="phone" class="form-input" placeholder=" " required>
+                            <label for="phone" class="form-label">Phone Number</label>
+                        </div>
+                        <div class="form-group">
+                            <select id="type-of-debt" name="type of debt" class="form-input" style="color: #475569;" required>
+                                <option value="" disabled selected>Select Loan Type</option>
+                                <option value="Personal Loan">Personal Loan</option>
+                                <option value="Credit Card Debt">Credit Card Debt</option>
+                                <option value="Gold Loan">Gold Loan</option>
+                                <option value="Multiple Loan">Multiple Loan</option>
+                                <option value="Recovery Harassment">Recovery Harassment</option>
+                                <option value="CIBIL Issues">CIBIL Issues</option>
+                                <option value="Others">Others</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <input type="amount" id="amount" name="amount" class="form-input" placeholder=" " required>
+                            <label for="amount" class="form-label">Approximate Loan Amount</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" rows="3" name="massage" class="form-input" placeholder=" "></textarea>
+                            <label for="message" class="form-label">Brief Issue (Optional)</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Get Free
+                            Consultation</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col grid-mode">
+                    <a href="#" class="footer-logo"><i class="fas fa-shield-alt"></i> Loan Mukti</a>
+                    <p>India's leading debt resolution platform, committed to helping individuals and small businesses
+                        overcome their debt challenges and regain financial freedom.</p>
+                </div>
+                <div class="footer-col ">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Use</a></li>
+                        <li><a href="#">Disclaimer</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col grid-mode">
+                    <h4>Subscribe</h4>
+                    <div class="social-icon">
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" x="0" y="0"
+                                viewBox="0 0 155.139 155.139" xml:space="preserve" class="">
+                                <g>
+                                    <path
+                                        d="M89.584 155.139V84.378h23.742l3.562-27.585H89.584V39.184c0-7.984 2.208-13.425 13.67-13.425l14.595-.006V1.08C115.325.752 106.661 0 96.577 0 75.52 0 61.104 12.853 61.104 36.452v20.341H37.29v27.585h23.814v70.761h28.48z"
+                                        data-original="#010002" class=""></path>
+                                </g>
+                            </svg>
+                        </a>
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" x="0" y="0"
+                                viewBox="0 0 24 24" xml:space="preserve" class="">
+                                <g>
+                                    <path
+                                        d="M23.994 24v-.001H24v-8.802c0-4.306-.927-7.623-5.961-7.623-2.42 0-4.044 1.328-4.707 2.587h-.07V7.976H8.489v16.023h4.97v-7.934c0-2.089.396-4.109 2.983-4.109 2.549 0 2.587 2.384 2.587 4.243V24zM.396 7.977h4.976V24H.396zM2.882 0C1.291 0 0 1.291 0 2.882s1.291 2.909 2.882 2.909 2.882-1.318 2.882-2.909A2.884 2.884 0 0 0 2.882 0z"
+                                        opacity="1" data-original="#000000" class=""></path>
+                                </g>
+                            </svg>
+                        </a>
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" x="0" y="0"
+                                viewBox="0 0 511 511.9" xml:space="preserve" class="">
+                                <g>
+                                    <path
+                                        d="M510.95 150.5c-1.2-27.2-5.598-45.898-11.9-62.102-6.5-17.199-16.5-32.597-29.6-45.398-12.802-13-28.302-23.102-45.302-29.5-16.296-6.3-34.898-10.7-62.097-11.898C334.648.3 325.949 0 256.449 0s-78.199.3-105.5 1.5c-27.199 1.2-45.898 5.602-62.097 11.898-17.204 6.5-32.602 16.5-45.403 29.602-13 12.8-23.097 28.3-29.5 45.3-6.3 16.302-10.699 34.9-11.898 62.098C.75 177.801.449 186.5.449 256s.301 78.2 1.5 105.5c1.2 27.2 5.602 45.898 11.903 62.102 6.5 17.199 16.597 32.597 29.597 45.398 12.801 13 28.301 23.102 45.301 29.5 16.3 6.3 34.898 10.7 62.102 11.898 27.296 1.204 36 1.5 105.5 1.5s78.199-.296 105.5-1.5c27.199-1.199 45.898-5.597 62.097-11.898a130.934 130.934 0 0 0 74.903-74.898c6.296-16.301 10.699-34.903 11.898-62.102 1.2-27.3 1.5-36 1.5-105.5s-.102-78.2-1.3-105.5zm-46.098 209c-1.102 25-5.301 38.5-8.801 47.5-8.602 22.3-26.301 40-48.602 48.602-9 3.5-22.597 7.699-47.5 8.796-27 1.204-35.097 1.5-103.398 1.5s-76.5-.296-103.403-1.5c-25-1.097-38.5-5.296-47.5-8.796C94.551 451.5 84.45 445 76.25 436.5c-8.5-8.3-15-18.3-19.102-29.398-3.5-9-7.699-22.602-8.796-47.5-1.204-27-1.5-35.102-1.5-103.403s.296-76.5 1.5-103.398c1.097-25 5.296-38.5 8.796-47.5C61.25 94.199 67.75 84.1 76.352 75.898c8.296-8.5 18.296-15 29.398-19.097 9-3.5 22.602-7.7 47.5-8.801 27-1.2 35.102-1.5 103.398-1.5 68.403 0 76.5.3 103.403 1.5 25 1.102 38.5 5.3 47.5 8.8 11.097 4.098 21.199 10.598 29.398 19.098 8.5 8.301 15 18.301 19.102 29.403 3.5 9 7.699 22.597 8.8 47.5 1.2 27 1.5 35.097 1.5 103.398s-.3 76.301-1.5 103.301zm0 0"
+                                        opacity="1" data-original="#000000" class=""></path>
+                                    <path
+                                        d="M256.45 124.5c-72.598 0-131.5 58.898-131.5 131.5s58.902 131.5 131.5 131.5c72.6 0 131.5-58.898 131.5-131.5s-58.9-131.5-131.5-131.5zm0 216.8c-47.098 0-85.302-38.198-85.302-85.3s38.204-85.3 85.301-85.3c47.102 0 85.301 38.198 85.301 85.3s-38.2 85.3-85.3 85.3zM423.852 119.3c0 16.954-13.747 30.7-30.704 30.7-16.953 0-30.699-13.746-30.699-30.7 0-16.956 13.746-30.698 30.7-30.698 16.956 0 30.703 13.742 30.703 30.699zm0 0"
+                                        opacity="1" data-original="#000000" class=""></path>
+                                </g>
+                            </svg>
+                        </a>
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" x="0" y="0"
+                                viewBox="0 0 511.999 511" xml:space="preserve" class="">
+                                <g transform="matrix(1,0,0,1,0,70)">
+                                    <path
+                                        d="M255.98 370.492h-.136c-15.45-.105-152.028-1.351-190.723-11.816-27.043-7.27-48.39-28.594-55.68-55.64C-.684 265.022-.039 191.84.031 185.995c-.066-5.816-.719-79.605 9.38-117.93.01-.035.019-.074.03-.109 7.207-26.738 29.036-48.723 55.614-56.012.066-.02.136-.035.203-.054C103.516 1.836 240.363.605 255.844.5h.277c15.488.105 152.43 1.352 190.77 11.832 26.972 7.25 48.304 28.547 55.613 55.559 10.504 38.351 9.531 112.3 9.426 118.543.074 6.148.687 78.675-9.38 116.878-.007.04-.019.075-.027.11-7.293 27.047-28.636 48.371-55.71 55.648-.036.012-.075.02-.11.032-38.254 10.05-175.105 11.28-190.582 11.39h-.14zM48.074 78.324c-8.89 33.828-8.05 106.676-8.043 107.41v.528c-.265 20.203.668 78.71 8.047 106.422 3.578 13.27 14.106 23.78 27.457 27.37 28.55 7.723 139.79 10.153 180.445 10.438 40.762-.285 152.165-2.648 180.504-10.062 13.309-3.602 23.801-14.078 27.403-27.364 7.386-28.117 8.312-86.34 8.043-106.414 0-.21 0-.422.004-.632.367-20.446-.356-79.637-8.012-107.57a.624.624 0 0 1-.02-.083c-3.593-13.328-14.125-23.84-27.476-27.43-28.274-7.73-139.692-10.152-180.446-10.437-40.734.285-152.027 2.645-180.453 10.05-13.097 3.634-23.863 14.52-27.453 27.774zM483.211 298.22h.012zM205 266.492V104.496l140 81zm0 0"
+                                        opacity="1" data-original="#000000" class=""></path>
+                                </g>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="copy-right">
+                &copy; 2025 Loan Mukti. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
