@@ -111,15 +111,16 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 24px;
   }
-  .problem-card::before{
+
+  .problem-card::before {
     opacity: 1;
   }
 
-  .problem-grid-services .service-card h3{
+  .problem-grid-services .service-card h3 {
     color: #cfa355;
   }
 
-  .problem-grid-services .service-card .icon-box{
+  .problem-grid-services .service-card .icon-box {
     color: #cfa355;
     background: rgba(255, 255, 255, 0.1);
   }
@@ -137,8 +138,8 @@
     min-height: 250px;
   }
 
-  
-  
+
+
 
   /* Process */
   .process-steps {
@@ -241,6 +242,94 @@
     font-size: 2.5rem;
   }
 
+  /* =========================================
+   EXPERT TEAM - MOBILE OPTIMIZATION
+   Transform individual cards into a unified "Stats Panel"
+   ========================================= */
+
+  .expert-team-grid {
+    /* Switch Grid to Flex Row for the "Strip" Layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    /* Container Styling to look like one wide card */
+    background: #fff;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    padding: 15px 0;
+    gap: 0;
+    /* Remove gap between items */
+    max-width: 100%;
+  }
+
+  .expert-card {
+    /* Remove individual Card Styling */
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+    padding: 0 5px;
+
+    /* Layout logic */
+    flex: 1;
+    /* Force equal width for all 3 items */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /* Add Vertical Dividers */
+    border-right: 1px solid #f1f5f9;
+  }
+
+  .expert-card:last-child {
+    border-right: none;
+    /* Remove border from last item */
+  }
+
+  /* Disable Desktop Interactions */
+  .expert-card:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .expert-card::after {
+    display: none;
+    /* Remove gold hover line */
+  }
+
+  /* Mobile Text & Icon Sizing */
+  .expert-card .icon-wrapper {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+    background: transparent;
+    color: var(--accent);
+    border: 1px solid red;
+  }
+
+  .expert-card .wrapper1 , .expert-card .wrapper2{
+    padding: 7px;
+  }
+
+  .expert-card h3 {
+    font-size: 1.75rem;
+    /* Readable large number */
+    margin-bottom: 2px;
+  }
+
+  .expert-card p {
+    font-size: 0.65rem;
+    /* Small, crisp text */
+    line-height: 1.2;
+    letter-spacing: 0.5px;
+    padding: 0 4px;
+    /* Prevent text touching edges */
+  }
+
   .video-container {
     margin: 30px 20px;
   }
@@ -274,8 +363,8 @@
     padding: 16px 16px 16px 70px;
     position: relative;
   }
-  
-  .step-item:not(:last-child) .step-num::before{
+
+  .step-item:not(:last-child) .step-num::before {
     content: "";
     position: absolute;
     top: 65px;
@@ -287,7 +376,7 @@
     z-index: 1;
   }
 
-  .process-steps::before{
+  .process-steps::before {
     display: none;
   }
 
@@ -317,9 +406,11 @@
   .section-padding {
     padding: 50px 0;
   }
+
   .hero {
-        padding-bottom: 50px;
-    }
+    padding-bottom: 50px;
+  }
+
   .hero-content h1 {
     font-size: 2rem;
     line-height: 1.2;
@@ -367,7 +458,7 @@
   }
 
   .problem-card,
-  .service-card .dark-oly{
+  .service-card .dark-oly {
     padding: 30px 24px;
   }
 
@@ -395,8 +486,9 @@
   }
 }
 
-@media (max-width: 320px){
-  .problem-grid-services .service-card{
+@media (max-width: 320px) {
+  .problem-grid-services .service-card {
     padding: 20px;
   }
 }
+
