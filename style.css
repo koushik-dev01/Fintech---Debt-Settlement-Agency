@@ -535,7 +535,7 @@ nav {
 .process-steps::after {
     content: '';
     position: absolute;
-    top: 25px;
+    top: 45px;
     left: 0;
     width: 100%;
     height: 2px;
@@ -831,38 +831,59 @@ footer .social-icon a svg:hover {
 
 
 
-/* ===== ULTRA SMOOTH SCROLL ANIMATIONS ===== */
+/* ===== 3. PREMIUM SMOOTH ANIMATIONS (GPU Accelerated) ===== */
+
+/* Base State */
 [data-animate] {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 0.75s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  will-change: transform, opacity;
+    opacity: 0;
+    /* Use 3D transform to force GPU rendering */
+    transform: translate3d(0, 40px, 0) scale(0.98); 
+    
+    /* The "Luxury" Curve: Fast start, very slow soft landing */
+    transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), 
+                transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+    
+    /* Hint to browser to optimize rendering */
+    will-change: opacity, transform;
 }
 
+/* Directional Variations */
 [data-animate="fade-right"] {
-  transform: translateX(-40px);
+    transform: translate3d(-50px, 0, 0);
 }
 
 [data-animate="fade-left"] {
-  transform: translateX(40px);
+    transform: translate3d(50px, 0, 0);
 }
 
 [data-animate="fade-up"] {
-  transform: translateY(40px);
+    transform: translate3d(0, 50px, 0);
 }
 
+/* Active State (Triggered by JS) */
 [data-animate].animate {
-  opacity: 1 !important;
-  transform: translateX(0) translateY(0) !important;
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
 }
 
-/* Enhanced card stagger (backup) */
-.problem-grid [data-animate],
-.problem-grid2 [data-animate],
-.problem-grid-services [data-animate],
-.process-steps [data-animate] {
-  transition-duration: 0.7s;
-  transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+/* Staggered Delays (Handled via CSS for 60fps performance) */
+[data-animate].delay-1 { transition-delay: 0.1s; }
+[data-animate].delay-2 { transition-delay: 0.2s; }
+[data-animate].delay-3 { transition-delay: 0.3s; }
+[data-animate].delay-4 { transition-delay: 0.4s; }
+[data-animate].delay-5 { transition-delay: 0.5s; }
+[data-animate].delay-6 { transition-delay: 0.6s; }
+
+/* Mobile Optimization: Reduce movement on small screens to prevent scroll lag */
+@media (max-width: 768px) {
+    [data-animate] {
+        transform: translate3d(0, 20px, 0);
+        transition-duration: 0.8s;
+    }
+    [data-animate="fade-right"], 
+    [data-animate="fade-left"] {
+        transform: translate3d(0, 20px, 0); /* Reset horizontal moves to vertical on mobile */
+    }
 }
 
 /* Floating WhatsApp Button */

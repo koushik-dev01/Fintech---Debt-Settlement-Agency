@@ -1,170 +1,123 @@
-// 1. Sticky Navbar 
+// 1. STICKY HEADER
 const header = document.getElementById('header');
 
 window.addEventListener('scroll', () => {
-  header.classList.toggle('scrolled', window.scrollY > 50);
+    header.classList.toggle('scrolled', window.scrollY > 50);
 });
 
-
-
-/// Mobile Menu Slide + Icon Switch + Auto Close
+// 2. MOBILE MENU HANDLING
 const mobileBtn = document.getElementById('mobileMenuBtn');
 const navLinks = document.getElementById('navLinks');
 const navItems = navLinks.querySelectorAll('a');
 const icon = mobileBtn.querySelector('i');
 
 mobileBtn.addEventListener('click', () => {
-  navLinks.classList.toggle('active');
-
-  if (navLinks.classList.contains('active')) {
-    icon.classList.remove('fa-bars');
-    icon.classList.add('fa-xmark');
-  } else {
-    icon.classList.remove('fa-xmark');
-    icon.classList.add('fa-bars');
-  }
+    navLinks.classList.toggle('active');
+    
+    // Toggle Icon
+    if (navLinks.classList.contains('active')) {
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-xmark');
+    } else {
+        icon.classList.remove('fa-xmark');
+        icon.classList.add('fa-bars');
+    }
 });
 
-// Auto close on menu item click
+// Auto Close Menu on Link Click
 navItems.forEach(item => {
-  item.addEventListener('click', () => {
-    navLinks.classList.remove('active');
-    icon.classList.remove('fa-xmark');
-    icon.classList.add('fa-bars');
-  });
+    item.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        icon.classList.remove('fa-xmark');
+        icon.classList.add('fa-bars');
+    });
 });
 
-
-
-
-// 2. ENHANCED Swiper - 9 Testimonials
+// 3. SWIPER SLIDER CONFIGURATION
 if (document.querySelector('.mySwiper')) {
-  var swiper = new Swiper('.mySwiper', {
-    slidesPerView: 1,
-    spaceBetween: 30,
-    loop: true,
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    breakpoints: {
-      480: { slidesPerView: 1 },
-      768: { slidesPerView: 2 },
-      1024: { slidesPerView: 3 },
-      1200: { slidesPerView: 3 }
-    },
-    autoplay: {
-      delay: 4000,
-      disableOnInteraction: false,
-      pauseOnMouseEnter: true,
-    },
-    speed: 600,
-    grabCursor: true,
-  });
+    var swiper = new Swiper('.mySwiper', {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        breakpoints: {
+            480: { slidesPerView: 1 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 }
+        },
+        autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+        },
+        speed: 800, // Slower speed for smoother slide
+    });
 }
 
+// 4. OPTIMIZED SCROLL ANIMATION OBSERVER
+// (This replaces AOS)
+const observerOptions = {
+    root: null,
+    rootMargin: '0px 0px -50px 0px', // Trigger slightly before element is fully in view
+    threshold: 0.1
+};
 
-// 3. ULTRA SMOOTH SCROLL ANIMATIONS
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const container = entry.target.closest('.problem-grid, .problem-grid-services, .process-steps, .values-grid');
-      
-      if (container) {
-        // Individual smooth stagger for cards
-        const items = container.querySelectorAll('[data-animate]');
-        items.forEach((item, index) => {
-          setTimeout(() => {
-            item.style.opacity = '1';
-            item.style.transform = 'translateY(0)';
-            item.classList.add('animate');
-          }, index * 120); // Perfect 120ms stagger
-        });
-      } else {
-        // Smooth single elements
-        entry.target.classList.add('animate');
-      }
-    }
-  });
-}, { 
-  threshold: 0.15, 
-  rootMargin: '0px 0px -80px 0px' 
-});
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const element = entry.target;
+            element.classList.add('animate');
+            observer.unobserve(element); // Stop watching once animated
+        }
+    });
+}, observerOptions);
 
-// Observe all animated elements
-document.querySelectorAll('[data-animate]').forEach(el => observer.observe(el));
+// Initialize Observer with Stagger Logic
+const animatedElements = document.querySelectorAll('[data-animate]');
 
-
-// Video player functionality
-document.addEventListener('DOMContentLoaded', function () {
-    const video = document.getElementById('promo-video');
-    const playBtn = document.getElementById('play-btn');
-    const container = document.querySelector('.video-container');
-
-    if (video && playBtn && container) {
-        // Hide controls initially
-        video.controls = false;
+animatedElements.forEach(el => {
+    // Check if element is inside a grid/list to apply stagger delay
+    const container = el.closest('.problem-grid, .problem-grid-services, .process-steps, .values-grid');
+    
+    if (container) {
+        const siblings = Array.from(container.querySelectorAll('[data-animate]'));
+        const index = siblings.indexOf(el);
         
-        // Play button click
-        playBtn.addEventListener('click', function(e) {
-            e.preventDefault();
-            container.classList.add('video-playing');
-            video.play().then(() => {
-                video.controls = true;
-            }).catch(err => {
-                console.log('Autoplay prevented:', err);
-                video.controls = true;
-                container.classList.remove('video-playing');
-            });
-        });
-    };
-
-    if (video && playBtn && container) {
-        // Show native controls when playing
-        playBtn.addEventListener('click', function (e) {
-            e.preventDefault();
-            container.classList.add('video-playing');
-            video.play().then(() => {
-                video.controls = true; // Ensure controls are visible
-            }).catch(err => {
-                console.log('Autoplay prevented:', err);
-                // Fallback: show controls immediately
-                video.controls = true;
-                container.classList.remove('video-playing');
-            });
-        });
-
-        // Click video to play/pause
-        video.addEventListener('click', function (e) {
-            if (!video.controls) {
-                if (video.paused) {
-                    container.classList.add('video-playing');
-                    video.play();
-                }
-            }
-        });
-
-        // Reset overlay when video ends or paused
-        video.addEventListener('pause', function () {
-            if (video.currentTime === 0 || video.ended) {
-                container.classList.remove('video-playing');
-            }
-        });
-
-        video.addEventListener('ended', function () {
-            container.classList.remove('video-playing');
-        });
-
-        // Hide overlay on first user interaction
-        let hasInteracted = false;
-        document.addEventListener('click', function () {
-            if (!hasInteracted) {
-                hasInteracted = true;
-            }
-        }, { once: true });
+        // Add CSS delay class (delay-1, delay-2, etc.)
+        if (index >= 0) {
+            el.classList.add(`delay-${(index % 6) + 1}`);
+        }
     }
+    
+    observer.observe(el);
 });
+
+
+// 5. VIDEO PLAYER FUNCTIONALITY
+const video = document.getElementById('promo-video');
+const playBtn = document.getElementById('play-btn');
+const videoContainer = document.querySelector('.video-container');
+
+if (video && playBtn) {
+    playBtn.addEventListener('click', () => {
+        video.play();
+        video.controls = true;
+        videoContainer.classList.add('video-playing');
+    });
+
+    video.addEventListener('pause', () => {
+        if (!video.seeking) {
+            videoContainer.classList.remove('video-playing');
+            video.controls = false;
+        }
+    });
+
+    video.addEventListener('ended', () => {
+        videoContainer.classList.remove('video-playing');
+        video.controls = false;
+        video.load(); // Reset video
+    });
+}
