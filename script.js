@@ -49,7 +49,7 @@ if (document.querySelector('.mySwiper')) {
             1024: { slidesPerView: 3 }
         },
         autoplay: {
-            delay: 4000,
+            delay: 3000,
             disableOnInteraction: false,
             pauseOnMouseEnter: true,
         },
