@@ -331,7 +331,7 @@
   }
 
   .video-container {
-    margin: 30px 20px;
+    margin: 30px auto;
   }
 
   .testimonial-slide {
@@ -482,7 +482,8 @@
   }
 
   .video-container {
-    margin: 24px 12px;
+    margin: 24px auto;
+    width: 350px;
   }
 }
 
